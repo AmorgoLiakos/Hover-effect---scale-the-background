@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.main-container:hover {
+  cursor: pointer;
+}
+
+.main-container:hover .back {
+  scale: 1.2;
+}
+
+.main-container:hover .back img {
+  border-radius: 14px;
+}
+
+.back,
+.front {
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.back img {
+  transition: all 1.0s ease;
+}
+
+.front {
+  clip-path: ellipse(35% 50% at 50% 50%);
+}
